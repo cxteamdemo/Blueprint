@@ -1,8 +1,7 @@
 - hosts: all
-  remote_user: "{{ ansible_user }}"
   tasks:
   - name: run modprobe
-    command: sudo modprobe br_netfilter
+    shell: sudo modprobe br_netfilter
   
   - name: kernel parameter
     shell: echo '1' > /proc/sys/net/bridge/bridge-nf-call-iptables

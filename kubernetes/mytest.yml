@@ -1,4 +1,4 @@
-tasks:
+
 - name: run modprobe
   command: sudo modprobe br_netfilter
 

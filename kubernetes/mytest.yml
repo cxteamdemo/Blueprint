@@ -1,4 +1,4 @@
-- hosts: "{{ ansible_eth0.ipv4.address }}"
+- hosts: all
   remote_user: galal_hamid
   tasks:
   - name: run modprobe

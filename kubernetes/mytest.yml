@@ -1,6 +1,5 @@
 - name: run modprobe
-  shell:
-  sudo modprobe br_netfilter
+  shell: sudo modprobe br_netfilter
 
 - name: kernel parameter
   shell: echo '1' > /proc/sys/net/bridge/bridge-nf-call-iptables
@@ -29,6 +28,6 @@
      sudo systemctl start docker
      sudo swapoff -a
      kubeadm init
-	   mkdir -p $HOME/.kube
+     mkdir -p $HOME/.kube
      sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
      sudo chown $(id -u):$(id -g) $HOME/.kube/config

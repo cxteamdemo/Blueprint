@@ -1,5 +1,5 @@
 - hosts: all
-  remote_user: root
+  remote_user: galal_hamid
   tasks:
      - name: run modprobe
        command: sudo modprobe br_netfilter

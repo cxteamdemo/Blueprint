@@ -1,5 +1,5 @@
 - hosts: all
-  remote_user: galal_hamid
+  remote_user: "{{ ansible_user | default(ansible_user_id) }}"
   tasks:
   - name: run modprobe
     command: sudo modprobe br_netfilter
